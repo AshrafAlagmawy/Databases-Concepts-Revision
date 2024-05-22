@@ -200,7 +200,7 @@ Here is the SQL code:
 -- Table for students
 CREATE TABLE Students (
   StudentID INTEGER PRIMARY KEY,
-  Name TEXT NOT NULL,
+  Name STRING NOT NULL,
   Age INTEGER CHECK (Age >= 18),  
   MajorID INTEGER,
   FOREIGN KEY (MajorID) REFERENCES Majors(MajorID)
@@ -209,7 +209,7 @@ CREATE TABLE Students (
 -- Table for courses
 CREATE TABLE Courses (
   CourseID INTEGER PRIMARY KEY,
-  Title TEXT NOT NULL,
+  Title STRING NOT NULL,
   Credits INTEGER CHECK (Credits >= 0)
 );
 
@@ -226,7 +226,7 @@ CREATE TABLE Enrollments (
 -- The table that holds the list of possible majors
 CREATE TABLE Majors (
   MajorID INTEGER PRIMARY KEY,
-  Name TEXT NOT NULL UNIQUE
+  Name STRING NOT NULL UNIQUE
 );
 ```
 <br>
