@@ -138,6 +138,60 @@ A **Relational Database Schema** is a set of rules that define the structure, co
 - **DEFAULT**: Automatically provides a predetermined value when a new column is created.
 - **INDEX**: Optimizes data retrieval by creating an index on the column(s), speeding up relevant queries.
 
+### Datatypes In SQL Server
+
+#### Numeric Data Types
+1. **int**: Integer data from -2,147,483,648 to 2,147,483,647.
+2. **bigint**: Integer data from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+3. **smallint**: Integer data from -32,768 to 32,767.
+4. **tinyint**: Integer data from 0 to 255.
+5. **bit**: Integer data with either a 1 or 0 value.
+6. **decimal(p, s)**: Fixed precision and scale numeric data from -10^38 +1 to 10^38 -1.
+7. **numeric(p, s)**: Functionally equivalent to decimal.
+8. **money**: Monetary data values from -922,337,203,685,477.5808 to 922,337,203,685,477.5807.
+9. **smallmoney**: Monetary data values from -214,748.3648 to 214,748.3647.
+10. **float(n)**: Floating precision number data from -1.79E + 308 to 1.79E + 308.
+11. **real**: Floating precision number data from -3.40E + 38 to 3.40E + 38.
+
+#### String Data Types
+1. **char(n)**: Fixed-length non-Unicode string data with a length of n characters.
+2. **varchar(n)**: Variable-length non-Unicode string data with a length of n characters.
+3. **varchar(max)**: Variable-length non-Unicode string data up to 2^31-1 characters.
+4. **text**: Variable-length non-Unicode data with a maximum length of 2^31-1 characters (deprecated).
+
+5. **nchar(n)**: Fixed-length Unicode string data with a length of n characters.
+6. **nvarchar(n)**: Variable-length Unicode string data with a length of n characters.
+7. **nvarchar(max)**: Variable-length Unicode string data up to 2^31-1 characters.
+8. **ntext**: Variable-length Unicode data with a maximum length of 2^31-1 characters (deprecated).
+
+#### Date and Time Data Types
+1. **date**: Date data from January 1, 0001, to December 31, 9999.
+2. **time**: Time data based on a 24-hour clock.
+3. **datetime**: Date and time data from January 1, 1753, to December 31, 9999, with an accuracy of 3.33 milliseconds.
+4. **datetime2**: Date and time data from January 1, 0001, to December 31, 9999, with an accuracy of 100 nanoseconds.
+5. **smalldatetime**: Date and time data from January 1, 1900, to June 6, 2079, with an accuracy of 1 minute.
+6. **datetimeoffset**: Date and time data with time zone awareness from January 1, 0001, to December 31, 9999, with an accuracy of 100 nanoseconds.
+7. **timestamp**: A unique number that gets updated every time a row gets updated. It’s not a date or time data type.
+
+#### Binary Data Types
+1. **binary(n)**: Fixed-length binary data with a length of n bytes.
+2. **varbinary(n)**: Variable-length binary data with a length of n bytes.
+3. **varbinary(max)**: Variable-length binary data up to 2^31-1 bytes.
+4. **image**: Variable-length binary data from 0 to 2^31-1 bytes (deprecated).
+
+#### Other Data Types
+1. **uniqueidentifier**: A globally unique identifier (GUID).
+2. **sql_variant**: Stores values of various SQL Server-supported data types.
+3. **xml**: Stores XML data. You can use XML schemas to ensure data integrity.
+4. **cursor**: A database cursor.
+5. **table**: Stores a result set for processing later.
+
+#### Deprecated Data Types
+It's worth noting that some data types are deprecated and should be avoided in new development work:
+- **text**
+- **ntext**
+- **image**
+
 ### Code Example: Schema for University Database
 
 Here is the SQL code:
