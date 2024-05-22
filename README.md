@@ -1,7 +1,5 @@
 # 50 Important Databases Interview Questions
 
-<br>
-
 ## 1. What is a _database management system (DBMS)_, and can you name some examples?
 
 A **Database Management System (DBMS)** serves as an intermediary between users and the database. It facilitates data maintenance, retrieval, and ongoing management, using a structured mechanism to ensure **data integrity, security, and efficiency**.
